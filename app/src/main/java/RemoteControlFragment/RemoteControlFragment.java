@@ -56,5 +56,31 @@ public class RemoteControlFragment  extends Fragment {
             }
         }
 
+        TableRow bottomRow = (TableRow)tableLayout
+                .getChildAt(tableLayout.getChildCount() - 1);
+
+        Button deleteButton = (Button)bottomRow.getChildAt(0);
+        deleteButton.setText("Delete");
+        deleteButton.setOnClickListener(new View.OnclickLiastener() {
+            public void onClick(View v) {
+                mWorkingTextView.setText("0");
             }
-        }
+        });
+
+        Button zeroButton = (Button)bottomRow.getChildAt(0);
+        deleteButton.setText("Delete");
+        deleteButton.setOnClickListener(new View.OnclickListener() {
+            public void onClick(View v) {
+                mWorkingTextView.setText("0");
+            }
+        });
+
+        Button zeroButton = (Button)bottomRow.getChildAt(1);
+        zeroButton.setText("0");
+        zeroButton.setOnClickListener(numberButtonListener);
+
+        Button enterButton = (Button)bottomRow.getChildAt(2);
+        enterButton.setText("Enter");
+        enterButton.setOnClickListener(new View.OnClickListener() {
+
+            });
