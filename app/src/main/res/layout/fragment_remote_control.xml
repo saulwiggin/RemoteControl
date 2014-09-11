@@ -20,15 +20,16 @@
         android:text="0"
         android:textColor="#cccccc"
         android:textSize="20dp" />
-    <TableRow android:layout_weight="1" >
-        <Button android:id="@+id/fragment_remote_control_enterButton"
-            android:id="@+id/fragment_remote_control_oneButton"
-            android:text="0" />
-        <Button
-            android:id="@+id/fragment_remote_control_oneButton"
-            android:text="1" />
-        <Button
-            android:id="@+id/fragment_remote_control_enterButton"
-            android:text="Enter" />
-    </TableRow>
+   <include
+       android:layout_weight="1"
+       layout="@layout/button_row" />
+    <include
+        android:layout_weight="1"
+        layout="@layout/button_row" />
+    <include
+        android:layout_weight="1"
+        layout="@layout/button_row" />
+    <include
+        android:layout_weight="1"
+        android="@layout/button_row" />
 </TableLayout>
