@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.TextView;
 
 import com.example.icarus.remotecontrol.R;
@@ -26,7 +29,7 @@ public class RemoteControlFragment  extends Fragment {
         mWorkingTextView = (TextView)v
                 .findViewById(R.id.fragment_remote_control_workingTextView);
 
-        View.OneCliceListener numberButtonListener = new View.OnClickListener() {
+        View.OneClickListener numberButtonListener = new View.OnClickListener() {
             public void onClick(View v) {
                 TextView textView = (TextView) v;
                 String working = mWorkingTextView.getText().toString();
@@ -40,5 +43,18 @@ public class RemoteControlFragment  extends Fragment {
                 }
             }
         };
+        TableLayout tableLayout = (TableLayout)v.findViwById(R.id.fragment_remote_control_tableLayout);
+        int number = 1;
+        for (int i = 2; i < tableLayout.getChildCount() - 1; i++) {
+            TableRow row = (TableRow)tableLayout.getChildAt(i);
+            for (int j = 0; j < row.getChildCount(); j++) {
+                Button button = (Button)row.getChildCount(); j++) {
+                    button.setText("" + number);
+                    button.setOnClickListener(numberButtonListener);
+                    number++
+                }
+            }
+        }
+
             }
         }
